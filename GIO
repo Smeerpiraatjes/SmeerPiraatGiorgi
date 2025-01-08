@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smeerpiraatjes - Cleaning Services</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #4a90e2, #9033ff, #ff3366);
+            color: white;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        header img {
+            height: 50px;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff3366;
+        }
+        .contact-btn {
+            background: #ff3366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .contact-btn:hover {
+            background: #9033ff;
+        }
+        .language-selector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .language-selector select {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+        }
+        .hero img {
+            max-width: 40%;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .section {
+            padding: 50px;
+        }
+        .section img {
+            max-width: 40%;
+            border-radius: 15px;
+            float: left;
+            margin-right: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .footer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #ff3366;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: white;
+        }
+        .highlight {
+            color: #ff3366;
+            font-weight: bold;
+        }
+        .copyright {
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Smeerpiraatjes Logo">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#upcoming">Upcoming</a>
+        </nav>
+        <button class="contact-btn">Contact</button>
+        <div class="language-selector">
+            <select onchange="changeLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="nl">Nederlands</option>
+                <option value="uk">Українська</option>
+                <option value="ru">Русский</option>
+            </select>
+        </div>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <div>
+                <h1>Welcome to Smeerpiraatjes!</h1>
+                <p>I offer professional cleaning services in the Overijssel region <span class="highlight">for now</span>. As a 19-year-old with big dreams, I am dedicated to making a difference. I aim to create opportunities for non-Dutch speakers and make cleaning jobs more humane and supportive.</p>
+                <button class="contact-btn">Contact Me</button>
+            </div>
+            <img src="cleaning-hero.jpg" alt="Professional Cleaning">
+        </section>
+        <section class="section">
+            <img src="cleaning-services.jpg" alt="Cleaning Services">
+            <h2>What Can You Achieve With Smeerpiraatjes?</h2>
+            <p>As someone who has worked in cleaning, I know how challenging it can be. My goal is to create a supportive environment where workers feel valued—with warm coffee, lunch breaks, and fair treatment. Together, we can make cleaning a respected profession!</p>
+        </section>
+        <section class="section" id="upcoming">
+            <h2>Join My Journey</h2>
+            <p>My vision for the future includes expanding services beyond Overijssel, creating jobs, and building a community. Let’s shape a better future together!</p>
+            <button class="contact-btn" onclick="openWhatsApp()">Free Consultation</button>
+        </section>
+    </main>
+    <footer class="footer">
+        <div>
+            <h3>Company</h3>
+            <a href="#about">About</a>
+            <a href="#locations">Locations</a>
+        </div>
+        <div>
+            <h3>Global</h3>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div>
+            <h3>Upcoming</h3>
+            <a href="#">Your Company 2</a>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Smeerpiraatjes. All Rights Reserved.
+        </div>
+    </footer>
+    <script>
+        function changeLanguage(lang) {
+            alert('Language switching to: ' + lang);
+            // Add logic for actual language switching here.
+        }
+
+        function openWhatsApp() {
+            window.open('https://wa.me/31623058408?text=Hello%20Smeerpiraatjes!', '_blank');
+        }
+    </script>
+</body>
+</html>
